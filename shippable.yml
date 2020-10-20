@@ -8,7 +8,6 @@ build:
     - npm install ejs
     - npm install
     - npm list ejs
-    - npm test
     - echo "Ci succeeded"
   cache: true
   cache_dir_list:
