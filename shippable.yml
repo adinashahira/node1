@@ -5,5 +5,11 @@ node_js:
 
 build:
   ci:
+    - npm install ejs
     - npm install
+    - npm list ejs
+    - npm test
     - echo "Ci succeeded"
+  cache: true
+  cache_dir_list:
+    - $SHIPPABLE_BUILD_DIR/node_modules
