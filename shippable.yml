@@ -3,8 +3,8 @@ language: node_js
 node_js:
   - 0.12
 
-env:
-  - XUNIT_FILE=shippable/testresults/result.xml
+# env:
+#   - XUNIT_FILE=shippable/testresults/result.xml
 
 build:
   ci:
