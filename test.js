@@ -1,6 +1,6 @@
-const {describe} = require('mocha');
+var {describe} = require('mocha');
 
-const assert = require('assert');
+var assert = require('assert');
 
 describe('Simple test suite:', function() {
     it('1 === 1 should be true', function() {
