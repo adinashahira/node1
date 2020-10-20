@@ -1,6 +1,6 @@
 #### CI CONFIG
 
-language:   <Language name>
+language:   nodejs
 
 # <language version>: #depending on language
 #   - <version>
