@@ -5,9 +5,13 @@ node_js:
 
 build:
   ci:
-    - npm install ejs
+    - npm install --global ejs
+    - npm install --global express
+    - npm install --global mocha
+    - npm info ejs version
+    - npm info express version
+    - npm info mocha version
     - npm install
-    - npm list ejs
     - echo "Ci succeeded"
   cache: true
   cache_dir_list:
