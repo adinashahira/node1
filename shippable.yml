@@ -12,7 +12,8 @@ build:
     - npm info express version
     - npm info mocha version
     - npm install
-    - echo "Ci succeeded"
+    - npm test
+    - echo "Ci is finished"
   cache: true
   cache_dir_list:
     - $SHIPPABLE_BUILD_DIR/node_modules
