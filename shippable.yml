@@ -45,7 +45,7 @@ env:
   global:
     - ENVG1: #"goo"
     - ENVG2: #"doo"
-  matrix:
+  #matrix:
     - ENV1: #"foo" <environment variables in dictionary format>
       ENV2: #"moo"
     - ENV1: #"foo" <environment variables in dictionary format>
@@ -53,7 +53,7 @@ env:
 #### end alternate env config ####
 
 #### matrix config - use when you want to include, exclude, or allow failures for specific combinations####
-matrix:
+#matrix:
   include:
     - ENV1: #"foo"
       <language version>: #<version>
