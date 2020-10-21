@@ -3,6 +3,11 @@ language: node_js
 node_js:
   - 12.18.3
 
+integrations:
+  key:
+    - integrationName: AWS EC2 Instance 1
+      type: AWS Keys
+
 build:
   ci:
     - npm install --global ejs
