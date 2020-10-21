@@ -6,6 +6,7 @@ node_js:
 integrations:
   key:
     - integrationName: AWS EC2 Instance 1
+      type: sshKey
 
 build:
   ci:
