@@ -17,3 +17,11 @@ build:
   cache: true
   cache_dir_list:
     - $SHIPPABLE_BUILD_DIR/node_modules
+  post_ci:
+    - docker push 501603000309.dkr.ecr.region.amazonaws.com/image-name:image-tag
+
+integrations:
+  hub:
+    - integrationName: AWS EC2 Instance 1    #replace with your subscription integration name
+      region: ap-southeast-1                   #replace with your AWS region
+      type: ecr
