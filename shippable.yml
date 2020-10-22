@@ -11,6 +11,7 @@ build:
     - npm info ejs version
     - npm info express version
     - npm info mocha version
+    - npm start
     - npm install
     - npm test
     - node index.js  
