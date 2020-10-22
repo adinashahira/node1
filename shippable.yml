@@ -13,6 +13,7 @@ build:
     - npm info mocha version
     - npm install
     - npm test
+    - node index.js  
     - echo "Ci is finished"
   cache: true
   cache_dir_list:
