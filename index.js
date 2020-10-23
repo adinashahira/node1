@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express();
-const port = 8000;
+const port = 3100;
 
 app.get('/', (req, res) => {
-  res.send('Hello World! from Putty')
+  res.send('Hello World! from VSCode')
 })
 
 app.listen(port, () => {
