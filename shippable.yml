@@ -14,7 +14,7 @@ build:
     - npm info mocha version
     - npm install
     - npm test
-    - node index.js &
+    - pm2 start index.js
   cache: true
   cache_dir_list:
     - $SHIPPABLE_BUILD_DIR/node_modules
