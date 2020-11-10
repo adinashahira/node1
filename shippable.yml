@@ -19,6 +19,9 @@ build:
   cache_dir_list:
     - $SHIPPABLE_BUILD_DIR/node_modules
 
+env:
+  - 13.212.117.199
+
 integrations:
   hub:
     - integrationName: AWS EC2 Instance 1    #replace with your subscription integration name
