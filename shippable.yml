@@ -22,6 +22,9 @@ build:
 
 env:
   - ENV1: "13.212.117.199"
+  - password: "$api_tests_password"
+  - host: "12.34.56.78"
+  - port: "22"
 
 integrations:
   hub:
