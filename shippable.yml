@@ -3,6 +3,26 @@ language: node_js
 node_js:
   - 12.18.3
 
+actions:
+- action: "[12.34.56.78] Execute: npm install --silent"
+  type: "SSH_COMMAND"
+  working_directory: "/"
+  login: "ec2-user"
+  password: "12345"
+  host: "ec2-user@ec2-13-212-117-199.ap-southeast-1.compute.amazonaws.com"
+  port: "22"
+  authentication_mode: "PASS"
+  ignore_errors: true
+  shell: "SH"
+  run_as_script: true
+  commands:
+  - "npm prune"
+  - "npm install --silent"
+  variables:
+  - key: "api_tests_password"
+    value: "secure!14ivLMxPgv7TX6c9+ITX/g=="
+    encrypted: true
+
 build:
   ci:
     - npm install --global ejs
@@ -20,11 +40,25 @@ build:
   cache_dir_list:
     - $SHIPPABLE_BUILD_DIR/node_modules
 
-env:
-  - ENV1: "13.212.117.199"
-  - password: "$api_tests_password"
-  - host: "12.34.56.78"
-  - port: "22"
+actions:
+- action: "[12.34.56.78] Execute: npm install --silent"
+  type: "SSH_COMMAND"
+  working_directory: "/"
+  login: "ec2-user"
+  password: "12345"
+  host: "ec2-user@ec2-13-212-117-199.ap-southeast-1.compute.amazonaws.com"
+  port: "22"
+  authentication_mode: "PASS"
+  ignore_errors: true
+  shell: "SH"
+  run_as_script: true
+  commands:
+  - "npm prune"
+  - "npm install --silent"
+  variables:
+  - key: "api_tests_password"
+    value: "secure!14ivLMxPgv7TX6c9+ITX/g=="
+    encrypted: true
 
 integrations:
   hub:
