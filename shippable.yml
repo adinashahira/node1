@@ -60,8 +60,8 @@ actions:
     value: "secure!14ivLMxPgv7TX6c9+ITX/g=="
     encrypted: true
 
-integrations:
-  hub:
-    - integrationName: AWS EC2 Instance 1    #replace with your subscription integration name
-      region: ap-southeast-1                   #replace with your AWS region
-      type: ecr
+#integrations:
+ # hub:
+  #  - integrationName: AWS EC2 Instance 1    #replace with your subscription integration name
+     # region: ap-southeast-1                   #replace with your AWS region
+     # type: ecr
