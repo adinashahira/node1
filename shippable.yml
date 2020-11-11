@@ -21,7 +21,8 @@ build:
     - $SHIPPABLE_BUILD_DIR/node_modules
 
 env:
-  - ENV1: "13.212.117.199"
+ # - ENV1: "13.212.117.199"
+   - ENV1: "AWS_Integration_1_INTEGRATION_ACCESSKEY"
 
 integrations:
   hub:
