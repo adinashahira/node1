@@ -5,27 +5,35 @@ node_js:
 
 build:
   ci:
-    - npm install --global ejs
     - npm install --global express
     - npm install --global mocha
     - npm install --global pm2
-    - npm info ejs version
-    - npm info express version
-    - npm info mocha version
     - npm install
     - npm test
     - pm2 start index.js
   
-  cache: true
-  cache_dir_list:
-    - $SHIPPABLE_BUILD_DIR/node_modules
+  #resources config
+  - name: github_repo
+    type: gitRepo
+    integration: "github1"
+    versionTemplate:
+      sourceName: "adinashahira/node1"
+      branch: master
 
-env:
- # - ENV1: "13.212.117.199"
-   - ENV1: "AWS_Integration_1_INTEGRATION_ACCESSKEY"
+# AWS credentials
+  - name: aws_integration
+    type: integration
+    integration: "aws1"      
 
-#integrations:
-  #hub:
-    #- integrationName: AWS EC2 Instance 1    #replace with your subscription integration name
-    #  region: ap-southeast-1                   #replace with your AWS region
-     # type: ecr
+# AWS PEM Key
+  - name: pemkey
+    type: integration
+    integration: "PEM1"    
+
+# Output of EC2 provisioning
+  - name: aws_ec2_info
+    type: params
+    versionTemplate:
+      params:
+        SEED: "initial_version"
+
